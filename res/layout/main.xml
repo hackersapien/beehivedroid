@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:id="@+id/widget28"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<ImageView
+android:id="@+id/picview"
+android:layout_width="218px"
+android:layout_height="139px"
+android:layout_alignParentTop="true"
+android:layout_centerHorizontal="true"
+>
+</ImageView>
+<Button
+android:id="@+id/register"
+android:layout_width="221px"
+android:layout_height="wrap_content"
+android:text="Register Child"
+android:layout_below="@+id/picview"
+android:layout_alignLeft="@+id/picview"
+>
+</Button>
+<Button
+android:id="@+id/view"
+android:layout_width="221px"
+android:layout_height="wrap_content"
+android:text="View Child Profiles"
+android:layout_below="@+id/register"
+android:layout_alignLeft="@+id/picview"
+>
+</Button>
+<Button
+android:id="@+id/viewg"
+android:layout_width="221px"
+android:layout_height="wrap_content"
+android:text="View Photo Gallery"
+android:layout_below="@+id/view"
+android:layout_alignLeft="@+id/picview"
+>
+</Button>
+<Button
+android:id="@+id/exit"
+android:layout_width="220px"
+android:layout_height="wrap_content"
+android:text="Exit Application"
+android:layout_below="@+id/viewg"
+android:layout_alignLeft="@+id/picview"
+>
+</Button>
+</RelativeLayout>

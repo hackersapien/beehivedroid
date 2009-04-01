@@ -1,0 +1,14 @@
+<resources>
+<array name="locations_array">
+		<item name="Africa">Africa</item>
+		<item name="Asia">Asia</item>
+		<item name="Europe">Europe</item>
+		<item name="America">America</item>
+	</array>
+	<array name="gender_array">
+		<item name="male">Male</item>
+		<item name="female">Female</item>
+		
+	</array>
+	
+</resources>
