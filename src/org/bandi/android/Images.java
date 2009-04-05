@@ -30,6 +30,7 @@ public class Images extends Activity
 	{
 
 		super.onCreate(icicle);
+		setTheme(android.R.style.Theme_Light);
 		setContentView(R.layout.images);
 
 		File images = new File("/sdcard/");

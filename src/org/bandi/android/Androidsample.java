@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class Androidsample extends Activity {
@@ -21,7 +22,6 @@ public class Androidsample extends Activity {
 	
 	private Button register;
 	private Button view;
-	private Button viewg;
 	private Button exit;
 	private ImageView mIV;
     private Bitmap mBitmap;
@@ -33,6 +33,7 @@ public class Androidsample extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		setTheme(android.R.style.Theme_Light);
 		setContentView(R.layout.main);
 		initControls();
 
@@ -50,14 +51,19 @@ public class Androidsample extends Activity {
 		register = (Button)findViewById(R.id.register);
 		exit = (Button)findViewById(R.id.exit);
 		view = (Button)findViewById(R.id.view);	
-		viewg = (Button)findViewById(R.id.viewg);
+		
 		
 		
 		
 		register.setOnClickListener(new Button.OnClickListener() {public void onClick (View v){register();}});
 		view.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){ view(); }});
-		viewg.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){ viewg(); }});
-	exit.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){ finish(); }});}
+	
+	exit.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){
+		
+		String exit = "Thank You for using our Application";
+    	Toast.makeText(Androidsample.this, exit, Toast.LENGTH_LONG).show();
+        
+		finish(); }});}
 			
 	
 	
@@ -65,6 +71,7 @@ public class Androidsample extends Activity {
 
 	private void register()
     {
+		
         Intent i = new Intent(this, Details.class);
         startActivity(i);
     }
@@ -76,12 +83,6 @@ public class Androidsample extends Activity {
 		startActivity(i);
     }
 	
-	private void viewg()
-    {
-        
-		Intent i = new Intent(this, Images.class);
-		startActivity(i);
-    }
 	
 	
 	

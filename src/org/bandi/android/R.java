@@ -11,6 +11,7 @@ public final class R {
     public static final class array {
         public static final int gender_array=0x7f040001;
         public static final int locations_array=0x7f040000;
+        public static final int menu_array=0x7f040002;
     }
     public static final class attr {
     }
@@ -19,39 +20,49 @@ public final class R {
         public static final int logo=0x7f020001;
     }
     public static final class id {
-        public static final int age=0x7f060007;
-        public static final int country=0x7f06000c;
-        public static final int endelea=0x7f06000e;
-        public static final int exit=0x7f060015;
-        public static final int firstname=0x7f060003;
-        public static final int fname=0x7f060002;
-        public static final int fname_text=0x7f060016;
-        public static final int gallery=0x7f060010;
-        public static final int genderSpinner=0x7f06000b;
-        public static final int height=0x7f060009;
-        public static final int lastname=0x7f060005;
-        public static final int lname_text=0x7f060017;
-        public static final int locationSpinner=0x7f06000d;
-        public static final int picview=0x7f060011;
-        public static final int register=0x7f060012;
-        public static final int spinnerTag=0x7f06000f;
-        public static final int spinnerTarget=0x7f060018;
-        public static final int view=0x7f060013;
-        public static final int viewg=0x7f060014;
-        public static final int widget28=0x7f060000;
-        public static final int widget30=0x7f060001;
-        public static final int widget35=0x7f060004;
-        public static final int widget37=0x7f060006;
-        public static final int widget39=0x7f060008;
-        public static final int widget41=0x7f06000a;
+        public static final int age=0x7f06000a;
+        public static final int albumItemCaption=0x7f060002;
+        public static final int cameraGallery=0x7f060001;
+        public static final int cameraInstructions=0x7f060000;
+        public static final int country=0x7f06000f;
+        public static final int editorCaption=0x7f060013;
+        public static final int editorImage=0x7f060012;
+        public static final int editorUpload=0x7f060014;
+        public static final int endelea=0x7f060011;
+        public static final int exit=0x7f06001a;
+        public static final int firstname=0x7f060006;
+        public static final int fname=0x7f060005;
+        public static final int fname_text=0x7f06001c;
+        public static final int gallery=0x7f060016;
+        public static final int genderSpinner=0x7f06000e;
+        public static final int height=0x7f06000c;
+        public static final int lastname=0x7f060008;
+        public static final int lname_text=0x7f06001d;
+        public static final int locationSpinner=0x7f060010;
+        public static final int menuSpinner=0x7f06001b;
+        public static final int picview=0x7f060017;
+        public static final int register=0x7f060018;
+        public static final int spinnerTag=0x7f060015;
+        public static final int spinnerTarget=0x7f06001e;
+        public static final int view=0x7f060019;
+        public static final int widget28=0x7f060003;
+        public static final int widget30=0x7f060004;
+        public static final int widget35=0x7f060007;
+        public static final int widget37=0x7f060009;
+        public static final int widget39=0x7f06000b;
+        public static final int widget41=0x7f06000d;
     }
     public static final class layout {
-        public static final int details=0x7f030000;
-        public static final int gender_items=0x7f030001;
-        public static final int images=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int records_row=0x7f030004;
-        public static final int spinner_location_items=0x7f030005;
+        public static final int camera=0x7f030000;
+        public static final int camera_item=0x7f030001;
+        public static final int details=0x7f030002;
+        public static final int editor=0x7f030003;
+        public static final int gender_items=0x7f030004;
+        public static final int images=0x7f030005;
+        public static final int main=0x7f030006;
+        public static final int menu=0x7f030007;
+        public static final int records_row=0x7f030008;
+        public static final int spinner_location_items=0x7f030009;
     }
     public static final class string {
         public static final int app_name=0x7f050001;

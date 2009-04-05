@@ -1,12 +1,11 @@
 package org.bandi.android;
 
-
-
-
-
 import java.io.IOException;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class Details extends Activity {
@@ -27,6 +27,7 @@ public class Details extends Activity {
 	private EditText age;
 	private EditText height;
 	private Button endelea;
+	private  Button back;
 	private Spinner locationSpinner;
 	private Spinner genderSpinner;
 	
@@ -36,9 +37,12 @@ public class Details extends Activity {
 	public static String he = "";
 	public static String gend = "";
 	public static String loc = "";
+	public static String caption = "";
     
 	private final String MY_DATABASE_NAME = "myCoolDB_2";
     private final String MY_DATABASE_TABLE = "Users1";
+
+    CameraDbAdapter image = new CameraDbAdapter(this);
 
     SQLiteDatabase myDB = null;
     
@@ -49,6 +53,7 @@ public class Details extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		setTheme(android.R.style.Theme_Light);
 		setContentView(R.layout.details);
 		initControls();
 
@@ -77,8 +82,9 @@ public class Details extends Activity {
 		adapter1
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		locationSpinner.setAdapter(adapter1);
-
+    
 		
+		endelea = (Button)findViewById(R.id.endelea);
 		
         try {
       	  myDB = this.openOrCreateDatabase(MY_DATABASE_NAME, MODE_PRIVATE, null);
@@ -94,24 +100,29 @@ public class Details extends Activity {
              
                      } catch (Exception ex) {
                                               }
-
+        
 		
 		
 		
-		endelea = (Button)findViewById(R.id.endelea);
-			
+		    
 		endelea.setOnClickListener(new Button.OnClickListener() { 
 			
+			
+
 			public void onClick (View v){
 				
 				    
 				    fname = firstname.getText().toString();
 		            if (TextUtils.isEmpty(fname)) {
 		                // Don't allow an empty name
+		            	String message = "Please Enter First Name";
+		            	Toast.makeText(Details.this, message, Toast.LENGTH_SHORT).show();
 		                
 		            	
 		                return;
 		            }
+		            	else {
+		            	
 		            	ages = age.getText().toString();
 		            	lname = lastname.getText().toString();
 		            	he = height.getText().toString();
@@ -133,30 +144,52 @@ public class Details extends Activity {
 		                                    + " (LastName, FirstName, Country, Age, Gender, Height)"
 		                                    + " VALUES ('"+laname+"', '"+faname+"', '"+location+"', '"+age+"', '"+gender+"', '"+heights+"');");
 		                
+		         
+		                //TODO: CREATE AND STORE CAPTION
+		                //caption = "Name:" + faname + " " + laname + "\n" + "Age:" + age + "\n" + "Country:" + location + "\n" + "Gender:" + gender;
+		                caption = "Name:" + faname + " " + laname;
+		                
+		                
 		                
 		                if (myDB != null)
 		                    myDB.close();
 		            	
 		            	
+		            	image.open();
+		            	image.createImage(caption);
 		            	
-		            	
-		            	pic();
+		            	String saved = "Record Saved, Please make sure you take a Picture";
+		            	Toast.makeText(Details.this, saved, Toast.LENGTH_LONG).show();
+		                
+		            	pic();}
 			
-			}});
-		//btnreset.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){ reset(); }});
+			}});}
+		//back.setOnClickListener(new Button.OnClickListener() { public void onClick (View v){ back(); }});
 
+	
+
+	
+	
+	private void back(){
+		
+		Intent i = new Intent(this, Androidsample.class);
+        startActivity(i);	
 	}
-
-	
-	
-	
 	
 	
 	private void pic()
     {
-        Intent i = new Intent(this, TesteIntent.class);
+        
+        Intent i = new Intent(this, Camera.class);
         startActivity(i);
     }
+	
+	public static String getCaption(){
+		
+		
+		return caption;
+	}	
+	
 	
 	
 	public static String getFname(){

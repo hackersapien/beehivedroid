@@ -11,4 +11,13 @@
 		
 	</array>
 	
+	<array name="menu_array">
+		<item name="menu">::MENU::</item>
+		<item name="register">Register Child</item>
+		<item name="view">View Profiles</item>
+		<item name="viewg">View Gallery</item>
+		<item name="exit">Exit Application</item>
+		
+	</array>
+	
 </resources>

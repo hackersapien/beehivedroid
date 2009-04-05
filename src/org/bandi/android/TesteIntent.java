@@ -22,6 +22,7 @@ public class TesteIntent extends Activity {
           try {
                Intent i = new Intent("android.media.action.IMAGE_CAPTURE");
                startActivityForResult(i, 5);
+               
           } catch (Exception e) {
                Log.e(CATEGORIA, e.getMessage());
           }
@@ -48,9 +49,12 @@ public class TesteIntent extends Activity {
                b.compress(Bitmap.CompressFormat.JPEG, 100, out);
                bos.flush();
                bos.close();
+               try {
                Intent i = new Intent(this, Androidsample.class);
                startActivity(i);
-
+               }
+               catch (Exception ex){}
+               
           } catch (IOException ex) {
                Log.e(CATEGORIA, ex.getMessage());
           }

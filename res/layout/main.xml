@@ -17,7 +17,7 @@ android:layout_centerHorizontal="true"
 android:id="@+id/register"
 android:layout_width="221px"
 android:layout_height="wrap_content"
-android:text="Register Child"
+android:text="::Register Child::"
 android:layout_below="@+id/picview"
 android:layout_alignLeft="@+id/picview"
 >
@@ -26,17 +26,8 @@ android:layout_alignLeft="@+id/picview"
 android:id="@+id/view"
 android:layout_width="221px"
 android:layout_height="wrap_content"
-android:text="View Child Profiles"
+android:text="::View Profiles::"
 android:layout_below="@+id/register"
-android:layout_alignLeft="@+id/picview"
->
-</Button>
-<Button
-android:id="@+id/viewg"
-android:layout_width="221px"
-android:layout_height="wrap_content"
-android:text="View Photo Gallery"
-android:layout_below="@+id/view"
 android:layout_alignLeft="@+id/picview"
 >
 </Button>
@@ -44,9 +35,9 @@ android:layout_alignLeft="@+id/picview"
 android:id="@+id/exit"
 android:layout_width="220px"
 android:layout_height="wrap_content"
-android:text="Exit Application"
-android:layout_below="@+id/viewg"
-android:layout_alignLeft="@+id/picview"
+android:text="::Exit Application::"
+android:layout_below="@+id/view"
+android:layout_alignRight="@+id/register"
 >
 </Button>
 </RelativeLayout>
